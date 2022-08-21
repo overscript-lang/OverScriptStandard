@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Configurations>Debug;Release;EXON</Configurations>
+    <Copyright>Copyright © 2022 Dmitry Trojan</Copyright>
+    <Version>1.1.0</Version>
+    <Authors>Dmitry Trojan</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants>TRACE;EXON</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='EXON|AnyCPU'">
+    <Optimize>false</Optimize>
+    <DefineConstants>TRACE;EXON</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>
