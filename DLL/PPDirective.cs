@@ -37,7 +37,7 @@ namespace OverScriptStandard
 
                     string path = p1.Substring(1, p1.Length - 2);
                     if (c == '<')
-                        path = System.IO.Path.GetFullPath(path, Program.ModulesDir);
+                        path = System.IO.Path.GetFullPath(path, Dirs.ModulesDir);
                     else
                     {
                         path = GetLitByStr(path) as string ?? "";

@@ -1189,8 +1189,8 @@ namespace OverScriptStandard
         public static string ExpandVars(string path, Script script)
         {
             path = path.Replace("%APPDIR%", script.ScriptDir);
-            path = path.Replace("%MODDIR%", Program.ModulesDir);
-            path = path.Replace("%OVSDIR%", Program.OverScriptDir);
+            path = path.Replace("%MODDIR%", Dirs.ModulesDir);
+            path = path.Replace("%OVSDIR%", Dirs.OverScriptDir);
             path = path.Replace("%CURDIR%", Environment.CurrentDirectory);
             path = Environment.ExpandEnvironmentVariables(path);
             return path;
